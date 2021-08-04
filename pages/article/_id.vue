@@ -75,6 +75,17 @@
         </div>
       </div>
     </div>
+    <div v-else class="flex items-center justify-center h-96">
+      <div>
+        <div class="text-2xl">Oops, Look's like the article wasn't exist!</div>
+        <p
+          class="text-normal text-gray-500 cursor-pointer"
+          @click="$router.push('/')"
+        >
+          Please go back to home
+        </p>
+      </div>
+    </div>
     <Footer />
   </div>
 </template>
@@ -109,10 +120,13 @@ export default {
     this.getArticle(this.$route.params.id)
       .then((res) => {
         this.article = { ...res }
-        this.state = 'ready'
+        // this.state = 'ready'
+        this.state = 'error'
       })
-      .catch((err) => console.error(err))
-      .finally(() => console.log(this.data))
+      .catch((err) => {
+        console.error(err)
+        this.state = 'error'
+      })
   },
 }
 </script>
