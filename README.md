@@ -1,4 +1,4 @@
-# POS App (Frontend)
+# YesDok Article
 
 ## What is it?
 

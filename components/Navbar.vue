@@ -60,7 +60,26 @@
       leave-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-if="expandNav" class="lg:hidden">Hola</div>
+      <div
+        v-if="expandNav"
+        class="
+          lg:hidden
+          fixed
+          w-full
+          cursor-pointer
+          bg-darkslategray
+          text-white text-lg
+          px-5
+        "
+      >
+        <h3
+          v-for="(el, i) in navigation"
+          class="mb-3"
+          @click="$router.push(`${el.to}`)"
+        >
+          {{ el.name }}
+        </h3>
+      </div>
     </transition>
   </div>
 </template>
