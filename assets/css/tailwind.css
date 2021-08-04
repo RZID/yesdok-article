@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Lato;
+  src: url('~/assets/fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: Cabin;
+  src: url('~/assets/fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf');
+}
+
+@font-face {
+  font-family: Lora;
+  src: url('~/assets/fonts/Lora/Lora-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('~/assets/fonts/Roboto/Roboto-Regular.ttf');
+}
