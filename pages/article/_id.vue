@@ -120,8 +120,7 @@ export default {
     this.getArticle(this.$route.params.id)
       .then((res) => {
         this.article = { ...res }
-        // this.state = 'ready'
-        this.state = 'error'
+        this.state = 'ready'
       })
       .catch((err) => {
         console.error(err)
